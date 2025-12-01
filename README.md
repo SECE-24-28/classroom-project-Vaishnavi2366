@@ -1,1 +1,15 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21896364&assignment_repo_type=AssignmentRepo)
+# Installation
+> `npm install --save @types/estree`
+
+# Summary
+This package contains type definitions for estree (https://github.com/estree/estree).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree.
+
+### Additional Details
+ * Last updated: Fri, 06 Jun 2025 00:04:33 GMT
+ * Dependencies: none
+
+# Credits
+These definitions were written by [RReverser](https://github.com/RReverser).
