@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click to fetch API data" onclick="demoapi()">
+    <p id="output"></p>
+    <script>
+        // let randomnumber = Math.random();
+        // let randomnumber = Math.floor(Math.random() * 100) + 1; // Generates a random integer between 1 and 100;
+        // document.getElementById("one").innerHTML = randomnumber;
+        // document.getElementById("one").style.color = "blue";
+        // let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+        // let randomIndex = Math.floor(Math.random() * colors.length);
+        // document.getElementById("one").style.color = colors[randomIndex];
+
+        function demoapi(){
+            const apioutput = document.getElementById("output");
+            const api = "https://jsonplaceholder.typicode.com/users/3"//API endpoint to fetch user data
+
+            fetch(api)
+            .then((function(response){
+                return response.json();
+            })) //to fetch the data from the API and convert it to JSON format
+
+            .then(function(data) {
+                apioutput.innerHTML = 
+                "Name: " + data.name + "<br>" +
+                "Email: " + data.email + "<br>" +
+                "Phone: " + data.phone
+            })//to display the data in the HTML element
+
+            .catch(function(error){
+                apioutput.innerHTML = "An error occurred while fetching data.";
+                console.log("Error:", error);//to handle any errors that occur during the fetch operation
+            });
+        }
+    </script>
+</body>
+</html>
